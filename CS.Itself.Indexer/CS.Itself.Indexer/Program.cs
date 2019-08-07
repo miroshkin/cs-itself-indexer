@@ -19,6 +19,13 @@ namespace CS.Itself.Indexer
             Console.WriteLine($"The name of the first month is {mic[1]}");
             Console.WriteLine($"September month number is {mic["September"]}");
 
+
+            var russianMonth = new LanguageStructure() {Language = "Russian", MonthNumber = 2};
+            Console.WriteLine($"The second month in {russianMonth.Language} is {mic[russianMonth]}");
+
+            var englishMonth = new LanguageStructure() {Language = "English", MonthNumber = 3};
+            Console.WriteLine($"The third month in {englishMonth.Language} is {mic[englishMonth]}");
+
         }
     }
 }

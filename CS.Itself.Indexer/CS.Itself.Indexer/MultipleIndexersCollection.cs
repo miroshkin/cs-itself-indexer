@@ -9,10 +9,16 @@ namespace CS.Itself.Indexer
 
     public class MultipleIndexersCollection
     {
-        private string[] months = new[]
+        private string[] englishMonths = new[]
         {
             "January", "February", "March", "April", "May", "June", "July", "August", "September", "October",
             "November", "December"
+        };
+
+        private string[] russianMonths = new[]
+        {
+            "Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь",
+            "Ноябрь", "Декабрь"
         };
 
         /// <summary>
@@ -22,7 +28,7 @@ namespace CS.Itself.Indexer
         /// <returns></returns>
         public int this[string month]
         {
-            get => Array.IndexOf(months,month) + 1;
+            get => Array.IndexOf(englishMonths,month) + 1;
         }
 
         /// <summary>
@@ -32,7 +38,23 @@ namespace CS.Itself.Indexer
         /// <returns></returns>
         public string this[int monthNumber]
         {
-            get => months[monthNumber - 1];
+            get => englishMonths[monthNumber - 1];
+        }
+
+
+        public string this [LanguageStructure structure]
+        {
+            get
+            {
+                if (structure.Language == "Russian")
+                {
+                    return russianMonths[structure.MonthNumber - 1];
+                }
+                else 
+                {
+                    return englishMonths[structure.MonthNumber - 1];
+                }
+            }
         }
     }
 }
