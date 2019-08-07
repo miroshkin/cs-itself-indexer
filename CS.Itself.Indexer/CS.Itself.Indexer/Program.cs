@@ -13,6 +13,12 @@ namespace CS.Itself.Indexer
             collection[2] = "Third element of a collection";
 
             Console.WriteLine($"collection[0] : {collection[0]}");
+
+
+            MultipleIndexersCollection mic = new MultipleIndexersCollection();
+            Console.WriteLine($"The name of the first month is {mic[1]}");
+            Console.WriteLine($"September month number is {mic["September"]}");
+
         }
     }
 }
