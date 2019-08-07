@@ -14,7 +14,5 @@
             get => _collection[index];
             set => _collection[index] = value;
         }
-
-        
     }
 }
