@@ -6,7 +6,13 @@ namespace CS.Itself.Indexer
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            CustomCollectionWithIndexer<string> collection = new CustomCollectionWithIndexer<string>(5);
+
+            collection[0] = "First element of a collection";
+            collection[1] = "Second element of a collection";
+            collection[2] = "Third element of a collection";
+
+            Console.WriteLine($"collection[0] : {collection[0]}");
         }
     }
 }
